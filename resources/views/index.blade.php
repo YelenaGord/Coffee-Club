@@ -1,6 +1,3 @@
-<!doctype html>
-<body>
+<html>
     <h1>Coffee Club</h1>
-</body>
-
 </html>

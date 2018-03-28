@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('members/index');
 });
+
+Route::get('/', 'ContentsController@home')->name('home');
+Route::get('/members', 'MembersController@home')->name('members');
+
+Route::get('/coffees', 'CoffeeController@showCoffees');
