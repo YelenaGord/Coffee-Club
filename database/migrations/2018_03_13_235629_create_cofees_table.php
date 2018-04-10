@@ -14,7 +14,7 @@ class CreateCofeesTable extends Migration
     public function up()
     {
         Schema::create('coffees', function (Blueprint $table) {
-            $table->increments('coffee_id');
+            $table->increments('id');
             $table->string('name');
             $table->text('desc');
             $table->string('roast');
