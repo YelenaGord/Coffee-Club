@@ -18,4 +18,6 @@ Route::get('/', function () {
 Route::get('/', 'ContentsController@home')->name('home');
 Route::get('/members', 'MembersController@home')->name('members');
 
-Route::get('/coffees', 'CoffeeController@showCoffees');
+Route::get('/coffees', 'CoffeeController@index');
+Route::get('/coffees/{coffee}', 'CoffeeController@show');
+

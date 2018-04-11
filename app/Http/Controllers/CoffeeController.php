@@ -10,9 +10,25 @@ use App\Coffee;
 class CoffeeController extends Controller
 {
     //
-    public function showCoffees()
+    public function index()
+    //{
+        //$coffees = Coffee::all();
+        //return view('coffees.index', compact('coffees'));
+    //}
     {
-        $coffees = Coffee::all();
-        return view('coffees.index', compact('coffees'));
+        //    Query builder syntax
+        //     $coffees = DB::table('coffees')->get();
+    
+        //     Eloquent syntax
+            $coffees =  Coffee::all();
+    
+            return view('coffees.index', compact('coffees'));
+    }
+    
+    public function show($id)
+    {
+        $coffee = Coffee::find($id);
+
+        return view('coffees.show', compact('coffee'));
     }
 }
