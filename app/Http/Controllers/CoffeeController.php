@@ -25,9 +25,9 @@ class CoffeeController extends Controller
             return view('coffees.index', compact('coffees'));
     }
     
-    public function show($id)
+    public function show(Coffee $coffee)
     {
-        $coffee = Coffee::find($id);
+        //$coffee = Coffee::find($id);
 
         return view('coffees.show', compact('coffee'));
     }
